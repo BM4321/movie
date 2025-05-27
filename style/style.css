@@ -1,0 +1,755 @@
+/* --- Global Styles & Resets --- */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #ffffff; /* White background */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Clears floats */
+}
+
+h1, h2, h3, h4 {
+    color: #333; /* Darker text for headings */
+    margin-bottom: 0.8em;
+}
+
+h2 { font-size: 2.2em; text-align: center; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1px; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.2em; }
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #007bff; /* Standard link blue */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Utility Classes --- */
+.py-1 { padding: 1rem 0; }
+.py-2 { padding: 2rem 0; }
+.py-3 { padding: 3rem 0; }
+.py-4 { padding: 4rem 0; }
+.py-5 { padding: 5rem 0; } /* Consistent vertical padding */
+
+.bg-light { background-color: #f8f9fa; } /* Light grey background */
+.bg-dark { background-color: #343a40; color: #fff; } /* Dark background */
+.bg-dark h2, .bg-dark h3, .bg-dark p { color: #fff; }
+.bg-dark a { color: #6cb2eb; }
+.bg-dark a:hover { color: #a7d1f5; }
+
+
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: #007bff;
+    padding: 8px 18px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* --- 1. Hero Section --- */
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg-placeholder.jpg') no-repeat center center/cover; /* Add a placeholder background image */
+    color: #fff;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Add some padding for smaller screens */
+}
+
+#hero .portrait {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #fff;
+}
+
+#hero h1 {
+    font-size: 3em; /* Responsive font size can be added with media queries */
+    margin-bottom: 0.5em;
+    color: #fff;
+    font-weight: 700;
+}
+
+#hero .tagline {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    font-weight: 300;
+}
+
+#hero .cta-button {
+    display: inline-block;
+    background-color: #28a745; /* Green */
+    color: #fff;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid #28a745;
+}
+
+#hero .cta-button:hover {
+    background-color: #218838; /* Darker Green */
+    border-color: #218838;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+#hero .cta-button.alt {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+#hero .cta-button.alt:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* --- Navigation --- */
+#main-nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky; /* Makes nav stick to top on scroll */
+    
+    top: 0;
+    z-index: 1000; /* Ensures nav stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 80%;
+    border-radius: 10px;
+}
+
+#main-nav .container {
+    display: flex;
+    justify-content: center; /* Center nav items */
+    align-items: center;
+}
+
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#main-nav ul li {
+    margin: 0 15px;
+}
+
+#main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+#main-nav ul li a:hover, #main-nav ul li a.active {
+    color: #007bff; /* Highlight color */
+    border-bottom: 2px solid #007bff;
+}
+
+
+/* --- 2. About Me Section --- */
+#about .about-content {
+    display: flex;
+    flex-direction: column; /* Stack on small screens */
+    align-items: center; /* Center items on small screens */
+    gap: 30px;
+}
+
+#about .bio {
+    flex: 2; /* Takes more space */
+}
+
+#about .about-graphic {
+    flex: 1; /* Takes less space */
+    max-width: 300px; /* Control image size */
+    border-radius: 8px;
+}
+
+/* For larger screens, side-by-side layout */
+@media (min-width: 768px) {
+    #about .about-content {
+        flex-direction: row; /* Side-by-side */
+        align-items: flex-start; /* Align to top */
+    }
+    #about .bio {
+        margin-right: 30px; /* Space between bio and image */
+    }
+}
+
+/* --- 3. Skills & Tech Stack Section --- */
+#skills .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+#skills .skill-category {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#skills .skill-category h3 {
+    margin-bottom: 15px;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+}
+#skills .skill-category h3 i {
+    margin-right: 10px;
+}
+
+
+#skills .skill-category ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95em;
+}
+
+#skills .skill-category ul li:last-child {
+    border-bottom: none;
+}
+
+/* --- 4. Portfolio / Projects Section --- */
+#portfolio .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 25px;
+}
+
+#portfolio .project-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; /* To contain image corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+#portfolio .project-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Cover the area, might crop */
+}
+
+#portfolio .project-card h3 {
+    padding: 15px 20px 5px 20px;
+    font-size: 1.3em;
+    color: #333;
+}
+
+#portfolio .project-card p {
+    padding: 0 20px 10px 20px;
+    font-size: 0.9em;
+    flex-grow: 1; /* Allows p to take available space pushing links down */
+    color: #555;
+}
+
+#portfolio .project-card p strong {
+    color: #333;
+}
+
+#portfolio .project-links {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+#portfolio .project-links a {
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+/* Portfolio Tabs (Optional) */
+#portfolio .tabs {
+    text-align: center;
+    margin-bottom: 30px;
+}
+#portfolio .tab-button {
+    background: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+#portfolio .tab-button.active, #portfolio .tab-button:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+/* --- 5. Testimonials Section --- */
+#testimonials .testimonial-slider {
+    /* Basic styling, a real slider would need JS */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#testimonials .testimonial {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-left: 5px solid #007bff;
+}
+#testimonials .testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #555;
+}
+#testimonials .testimonial h4 {
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    font-size: 1em;
+}
+
+/* --- 6. Blog / Insights Section --- */
+#blog .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+#blog .blog-post {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+#blog .blog-post img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+#blog .blog-post h3 {
+    padding: 15px 20px 5px 20px;
+    font-size: 1.2em;
+}
+
+#blog .blog-post p {
+    padding: 0 20px 15px 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+#blog .blog-post a {
+    display: inline-block;
+    margin: 0 20px 20px 20px;
+}
+
+/* --- 7. Contact Section --- */
+#contact {
+    color: #f8f9fa; /* Light text on dark background */
+}
+#contact h2, #contact p.contact-intro {
+    color: #fff;
+    text-align: center;
+}
+#contact p.contact-intro {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+#contact .contact-form-container {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #495057; /* Slightly lighter than section bg */
+    padding: 30px;
+    border-radius: 8px;
+}
+
+#contact .form-group {
+    margin-bottom: 20px;
+}
+
+#contact .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ced4da;
+}
+
+#contact .form-group input[type="text"],
+#contact .form-group input[type="email"],
+#contact .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+    background-color: #5a6268;
+    color: #fff;
+    font-size: 1em;
+}
+#contact .form-group input[type="text"]:focus,
+#contact .form-group input[type="email"]:focus,
+#contact .form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+#contact button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#contact .contact-links {
+    text-align: center;
+    margin-top: 40px;
+}
+#contact .contact-links p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+#contact .contact-links a {
+    color: #adb5bd; /* Lighter link color on dark bg */
+    margin: 0 15px;
+    font-size: 1.2em; /* Make icons/links a bit larger */
+    transition: color 0.3s ease;
+}
+#contact .contact-links a:hover {
+    color: #fff; /* Brighter on hover */
+    text-decoration: none;
+}
+#contact .contact-links i {
+    margin-right: 8px;
+}
+
+/* --- 8. Footer --- */
+#main-footer {
+    background: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0; /* py-3 was 3rem, reducing for footer */
+    font-size: 0.9em;
+}
+
+#main-footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#main-footer p {
+    margin: 0;
+}
+
+#main-footer .footer-nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+#main-footer .footer-nav li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+#main-footer .footer-nav li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#main-footer .social-icons a {
+    color: #ccc;
+    margin: 0 10px;
+    font-size: 1.4em; /* Larger social icons */
+    transition: color 0.3s ease;
+}
+
+#main-footer .social-icons a:hover {
+    color: #007bff; /* Highlight color on hover */
+}
+
+/* --- Responsive Adjustments --- */
+@media (min-width: 768px) { /* For tablets and larger */
+    #hero h1 {
+        font-size: 3.8em;
+    }
+    #hero .tagline {
+        font-size: 1.8em;
+    }
+
+    #main-nav .container { /* Adjust nav for wider screens if needed */
+        justify-content: space-between; /* Example: logo on left, links on right */
+    }
+    /* Add logo styling here if you have one */
+
+    #main-footer .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 767px) { /* For mobile phones */
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.4em; }
+
+    #hero h1 { font-size: 2.2em; }
+    #hero .tagline { font-size: 1.2em; }
+    #hero .cta-button { padding: 10px 20px; font-size: 1em; }
+
+    #main-nav ul {
+        flex-direction: column; /* Stack nav links on mobile */
+        align-items: center;
+    }
+    #main-nav ul li {
+        margin: 8px 0;
+    }
+
+    #skills .skills-grid, #portfolio .projects-grid, #blog .blog-grid {
+        grid-template-columns: 1fr; /* Stack items in grids on mobile */
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    #contact .contact-form-container {
+        padding: 20px;
+    }
+}
+
+/* --- Resume Page Specific Styles --- */
+#resume-page {
+    background-color: #fff; /* Or a very light grey like #fdfdfd */
+    padding-bottom: 40px; /* Extra padding at the bottom */
+}
+
+#resume-page .container {
+    max-width: 900px; /* Optimal width for readability of a resume */
+    background-color: #ffffff;
+    /* box-shadow: 0 0 15px rgba(0,0,0,0.1); Optional: if you want a card effect for the resume */
+    /* padding: 30px 40px; Optional: if adding shadow/border */
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #007bff; /* Accent color border */
+}
+
+.resume-header h1 {
+    font-size: 2.8em;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.resume-header p {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.resume-header .contact-info {
+    font-size: 0.95em;
+    color: #444;
+    line-height: 1.6;
+}
+.resume-header .contact-info span {
+    margin: 0 8px;
+    display: inline-block; /* Keeps them from breaking lines too easily */
+}
+.resume-header .contact-info i {
+    margin-right: 6px;
+    color: #007bff;
+}
+.resume-header .contact-info a {
+    color: #333;
+    text-decoration: none;
+}
+.resume-header .contact-info a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+
+.resume-section {
+    margin-bottom: 30px;
+}
+
+.resume-section h2 {
+    font-size: 1.6em;
+    color: #007bff; /* Accent color for section titles */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-align: left; /* Override global h2 center */
+    text-transform: none; /* Override global h2 uppercase */
+    letter-spacing: 0; /* Override global h2 letter-spacing */
+}
+
+.resume-section h2 i {
+    margin-right: 12px;
+    font-size: 1.2em; /* Slightly larger icon */
+}
+
+.resume-entry {
+    margin-bottom: 20px;
+}
+
+.resume-entry h3 {
+    font-size: 1.25em;
+    color: #333;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+
+.resume-entry .date-location {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.resume-entry ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.resume-entry ul li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.skills-section .skills-grid-resume {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.skills-section .skills-grid-resume h4 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+.skills-section .skills-grid-resume ul {
+    list-style: none; /* Or disc if you prefer */
+    padding-left: 0;
+    margin-left: 0;
+}
+.skills-section .skills-grid-resume ul li {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+    color: #444;
+    /* background-color: #f0f0f0; Optional: for pill-like effect for skills */
+    /* padding: 3px 8px; */
+    /* border-radius: 4px; */
+    /* display: inline-block; */
+    /* margin-right: 5px; */
+}
+
+/* Adjust nav active state for resume page */
+#main-nav ul li a.active {
+    color: #007bff; /* Highlight color */
+    border-bottom: 2px solid #007bff;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
