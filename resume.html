@@ -3,137 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume - BM</title>
+    <title>My Resume - SHEDRACK S. MAEDA</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+
+    </style>
 </head>
 <body>
+    <!-- Background animations -->
+    <div class="circuit-bg">
+        <svg width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+            <g class="circuit-lines">
+                <line x1="100" y1="100" x2="400" y2="100"/>
+                <line x1="400" y1="100" x2="400" y2="400"/>
+                <line x1="400" y1="400" x2="800" y2="400"/>
+                <line x1="800" y1="400" x2="800" y2="200"/>
+                <line x1="800" y1="200" x2="1200" y2="200"/>
+                <line x1="1200" y1="200" x2="1200" y2="600"/>
+                <line x1="1200" y1="600" x2="1600" y2="600"/>
+            </g>
+            <g class="circuit-dots">
+                <circle cx="100" cy="100" r="8"/>
+                <circle cx="400" cy="100" r="8"/>
+                <circle cx="400" cy="400" r="8"/>
+                <circle cx="800" cy="400" r="8"/>
+                <circle cx="800" cy="200" r="8"/>
+                <circle cx="1200" cy="200" r="8"/>
+                <circle cx="1200" cy="600" r="8"/>
+                <circle cx="1600" cy="600" r="8"/>
+            </g>
+            <g class="circuit-anim">
+                <circle class="moving-dot" r="6"/>
+            </g>
+        </svg>
+    </div>
+    <div class="animated-bg"></div>
 
-    <nav id="main-nav" class="reveal">
-        <div class="container">
-            <ul>
-                <li><a href="index.html#hero">Home</a></li>
-                <li><a href="index.html#about">About Me</a></li>
-                <li><a href="index.html#skills">Skills</a></li>
-                <li><a href="index.html#portfolio">Portfolio</a></li>
-                <li><a href="resume.html" class="active">Resume</a></li> <li><a href="index.html#blog">Blog</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="logo">BM</a>
+        <div class="menu-toggle" id="mobile-menu" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-    </nav>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode"><i class="fas fa-moon"></i></button>
+    </div>
+  </nav>
 
     <section id="resume-page" class="py-5 reveal">
         <div class="container">
             <header class="resume-header">
+                <!-- Profile Image -->
+                <img src="style/images/PXL_20240824_145723644.png" alt="Shedrack Maeda Profile Picture" class="profile-pic-resume">
                 <h1>SHEDRACK S. MAEDA</h1>
-                <p>GRAPHICS DESIGNER</p>
+                <p>WEB DEVELOPER | GRAPHICS DESIGNER</p>
                 <div class="contact-info">
                     <span><i class="fas fa-phone"></i> <a href="tel:+255765156660">+255765156660</a></span> |
                     <span><i class="fas fa-envelope"></i> <a href="mailto:shedrackmaeda@gmail.com">shedrackmaeda@gmail.com</a></span> |
-                    <span><i class="fas fa-map-marker-alt"></i> Arusha, Tanzania</span> <br>
-                    <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></span> |
-                    <span><i class="fab fa-github"></i> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></span> |
+                    <span><i class="fas fa-map-marker-alt"></i> 23 Ilboru street., Arusha, Tanzania</span> <br>
+                    <span><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/shedrack-maeda-ab297625b/" target="_blank">LinkedIn Profile</a></span> |
+                    <span><i class="fab fa-github"></i> <a href="https://github.com/BM4321" target="_blank">GitHub Profile</a></span> |
+                    <span><i class="fab fa-behance"></i> <a href="https://www.behance.net/yourusername" target="_blank">Behance Profile</a></span> |
                     <span><i class="fas fa-globe"></i> <a href="index.html" target="_blank">maeda's space.com</a></span>
                 </div>
             </header>
 
             <div class="resume-section">
-                <h2><i class="fas fa-user-tie"></i> Professional Summary</h2>
+                <h2><i class="fas fa-user-tie"></i> Profile</h2>
                 <p>
-                    A highly motivated and results-oriented Software Engineer and Graphics Designer with 2 years of experience in [mention key areas like web development, UI/UX design, etc.]. Passionate about creating innovative and user-centric digital experiences. Proven ability to [mention a key skill or achievement, e.g., manage projects from conception to deployment, design intuitive interfaces]. Seeking to leverage technical and creative expertise to contribute to a dynamic organization.
+                    I'm a Computer Science diploma student with a strong interest in Python and C programming. I enjoy building efficient, problem-solving code and still pursue my passion for graphic design using tools like Photoshop and Illustrator. My background in both design and development helps me create solutions that are both functional and visually engaging.
                 </p>
             </div>
 
             <div class="resume-section">
-                <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+                <h2><i class="fas fa-briefcase"></i> Experience</h2>
                 <div class="resume-entry">
-                    <h3>Senior Software Engineer | ExampleTech Inc.</h3>
-                    <p class="date-location">Jan 2022 – Present | City, Country</p>
+                    <h3>Intern | E3-EMPOWER AFRICA</h3>
+                    <p class="date-location">Jan 2024 – Present</p>
                     <ul>
-                        <li>Led the development of [Project Name], resulting in [Quantifiable Achievement, e.g., a 20% increase in user engagement].</li>
-                        <li>Designed and implemented responsive user interfaces for web applications using [Technologies, e.g., React, CSS3, HTML5].</li>
-                        <li>Collaborated with cross-functional teams including product managers and UX designers to define project requirements and deliverables.</li>
-                        <li>Mentored junior developers and conducted code reviews to ensure code quality and adherence to best practices.</li>
+                        <li>Computer basics instructor for new student</li>
+                        <li>Computer lab installation</li>
+                        <li>STEM training</li>
+                        <li>Report writing</li>
                     </ul>
                 </div>
                 <div class="resume-entry">
-                    <h3>UI/UX Designer & Developer | Creative Solutions Co.</h3>
-                    <p class="date-location">June 2019 – Dec 2021 | City, Country</p>
+                    <h3>JA-AFRICA PROGRAM</h3
+                    <p class="date-location">Dates April 2024 - October 2024</p>
                     <ul>
-                        <li>Developed and maintained client websites, focusing on user experience and visual appeal using [Technologies/Tools, e.g., WordPress, Adobe Suite, Figma].</li>
-                        <li>Created wireframes, mockups, and prototypes for new product features.</li>
-                        <li>Translated client requirements into compelling design solutions that met business objectives.</li>
+                        <li>Led and managed student participation in online courses.</li>
+                        <li>Help student taking online courses.</li>
+                        <li>Email and account Set-up.</li>
+                        <li>Collected and organized program data.</li>
                     </ul>
                 </div>
+                <div class="resume-entry">
+                    <h3>UWC TEACHING</h3>
+                    <p class="date-location">Dates Jan 2024 - April 2024</p>
+                    <ul>
+                        <li>LEGO training.</li>
+                        <li>Robotics training.</li>
+                    </ul>
                 </div>
+            </div>
 
             <div class="resume-section">
                 <h2><i class="fas fa-graduation-cap"></i> Education</h2>
                 <div class="resume-entry">
-                    <h3>Master of Science in Computer Science</h3>
-                    <p class="date-location">University Name | City, Country | Graduated: May 2019</p>
-                    <ul>
-                        <li>Relevant coursework: [e.g., Advanced Algorithms, Human-Computer Interaction, Web Development]</li>
-                        <li>Thesis/Major Project: [Brief description if applicable]</li>
-                    </ul>
+                    <h3>COLLEGE: Diploma in Computer Science</h3>
+                    <p class="date-location">Arusha Technical College | 2024-2027</p>
                 </div>
                 <div class="resume-entry">
-                    <h3>Bachelor of Fine Arts in Graphic Design</h3>
-                    <p class="date-location">Another University Name | City, Country | Graduated: May 2017</p>
-                    <ul>
-                        <li>Awards/Honors: [e.g., Dean's List, Design Competition Winner]</li>
-                    </ul>
+                    <h3>SECONDARY SCHOOL</h3>
+                    <p class="date-location">Kimaseki Secondary School | 2020-2023</p>
                 </div>
-                </div>
+            </div>
 
             <div class="resume-section skills-section">
                 <h2><i class="fas fa-cogs"></i> Skills</h2>
                 <div class="skills-grid-resume">
                     <div>
-                        <h4>Development:</h4>
+                        <h4>Technical Skills:</h4>
                         <ul>
-                            <li>JavaScript (ES6+), Python, Java, C++</li>
-                            <li>HTML5, CSS3, SASS/LESS</li>
-                            <li>React, Angular, Vue.js, Node.js</li>
-                            <li>RESTful APIs, GraphQL</li>
-                            <li>SQL (MySQL, PostgreSQL), NoSQL (MongoDB)</li>
-                            <li>Git, Docker, AWS</li>
+                            <li>Web Design</li>
+                            <li>Graphics designing</li>
+                            <li>Python programming</li>
+                            <li>C programming</li>
+                            <li>Computer Literacy</li>
                         </ul>
                     </div>
                     <div>
-                        <h4>Design:</h4>
+                        <h4>Soft Skills:</h4>
                         <ul>
-                            <li>Adobe Creative Suite (Photoshop, Illustrator, InDesign, XD)</li>
-                            <li>Figma, Sketch</li>
-                            <li>UI/UX Design Principles, User Research</li>
-                            <li>Wireframing, Prototyping</li>
-                            <li>Responsive Design, Mobile-First Design</li>
-                            <li>Branding & Identity</li>
+                            <li>Design Thinking</li>
+                            <li>Problem-Solving</li>
+                            <li>Strong Communication</li>
                         </ul>
                     </div>
                     <div>
-                        <h4>Other:</h4>
+                        <h4>Languages:</h4>
                         <ul>
-                            <li>Agile/Scrum Methodologies</li>
-                            <li>Project Management</li>
-                            <li>Problem Solving</li>
-                            <li>Communication</li>
+                            <li>English</li>
+                            <li>Swahili</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="resume-section">
-                <h2><i class="fas fa-award"></i> Projects / Portfolio Highlights</h2>
-                <p>For detailed project descriptions and visuals, please visit my portfolio: <a href="index.html#portfolio">index.html#portfolio</a></p>
+                <h2><i class="fas fa-award"></i> Achievements and Awards</h2>
                 <ul>
-                    <li><strong>Project Alpha:</strong> A web application for [purpose] using [key technologies]. My role involved [your contribution].</li>
-                    <li><strong>Design Showcase Beta:</strong> Branding and UI/UX design for [client/concept]. Focused on [design goals].</li>
+                    <li>Best ICT student award at Kimaseki Secondary School 2023</li>
+                    <li>STEM workshop certificate at EzempowerAfrica 2024</li>
+                    <li>Junior Achievement Certificate of completion</li>
+                    <li>CSEE: Division One (11 points)</li>
                 </ul>
-                </div>
+            </div>
 
-             <div class="resume-download-link py-3" style="text-align: center;">
-                <a href="docs/your-cv.pdf" download class="btn">Download CV as PDF</a>
+            <div class="resume-section">
+                <h2><i class="fas fa-users"></i> Referees</h2>
+                <div class="referees-section">
+                    <div class="referee-entry">
+                        <h3>Ji-Young Yoon Rhee</h3>
+                        <p>CEO, E3empower Africa</p>
+                        <p>Phone: <a href="tel:+255687228396">+255687228396</a></p>
+                        <p>Email: <a href="mailto:rhee.jiyoung@gmail.com">rhee.jiyoung@gmail.com</a></p>
+                    </div>
+                    <div class="referee-entry">
+                        <h3>Godwin Phillip Mollel</h3>
+                        <p>Former Second Master, Kimaseki Secondary School</p>
+                        <p>Phone: <a href="tel:+255784662583">+255784662583</a></p>
+                        <p>Email: <a href="mailto:godp82@gmail.com">godp82@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-download-link py-3" style="text-align: center;">
+                <a href="shedrack.pdf" download="SHEDRACK_MAEDA_Resume.pdf" class="btn">Download CV as PDF</a>
             </div>
 
         </div>
@@ -149,13 +204,70 @@
                 <li><a href="index.html#portfolio">Work</a></li>
             </ul>
             <div class="social-icons">
-                <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/shedrack-maeda-ab297625b" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/BM4321" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://behance.net/yourusername" target="_blank"><i class="fab fa-behance"></i></a>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Theme toggle
+        document.getElementById('theme-toggle').onclick = function() {
+            document.body.classList.toggle('light-theme');
+            // Change icon
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        };
+
+        // Animated background blocks
+        document.addEventListener('DOMContentLoaded', function() {
+            const bg = document.querySelector('.animated-bg');
+            for(let i=0; i<18; i++) {
+                const block = document.createElement('div');
+                block.className = 'block';
+                block.style.left = `${Math.random()*100}vw`;
+                block.style.top = `${-Math.random()*100}vh`;
+                block.style.animationDuration = `${8 + Math.random()*8}s`;
+                block.style.opacity = 0.2 + Math.random()*0.3;
+                bg.appendChild(block);
+            }
+        });
+
+        // Hamburger menu toggle (if present)
+        const navToggle = document.getElementById('nav-toggle');
+        if (navToggle) {
+            navToggle.onclick = function() {
+                document.getElementById('nav-links').classList.toggle('show');
+            };
+        }
+            // Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navLinks = document.getElementById('nav-links');
+
+      if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', function() {
+          mobileMenu.classList.toggle('is-active');
+          navLinks.classList.toggle('active');
+          // Accessibility: update aria-expanded
+          mobileMenu.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+      }
+
+      // Optional: Close the menu when a link is clicked (useful for single-page apps)
+      navLinks?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navLinks.classList.contains('active')) {
+            mobileMenu.classList.remove('is-active');
+            navLinks.classList.remove('active');
+            mobileMenu.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    });
+    </script>
 </body>
 </html>

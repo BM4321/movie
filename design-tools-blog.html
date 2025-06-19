@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Design Tools - BM's Blog</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="style/images/logo.svg" type="image/x-icon">
+    <!-- Note: CSS for comments section is excluded as requested and should be in style/style.css -->
+</head>
+<body>
+    <!-- Background animations (copied from index.html) -->
+    <div class="circuit-bg">
+        <svg width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+            <g class="circuit-lines">
+                <line x1="100" y1="100" x2="400" y2="100"/>
+                <line x1="400" y1="100" x2="400" y2="400"/>
+                <line x1="400" y1="400" x2="800" y2="400"/>
+                <line x1="800" y1="400" x2="800" y2="200"/>
+                <line x1="800" y1="200" x2="1200" y2="200"/>
+                <line x1="1200" y1="200" x2="1200" y2="600"/>
+                <line x1="1200" y1="600" x2="1600" y2="600"/>
+            </g>
+            <g class="circuit-dots">
+                <circle cx="100" cy="100" r="8"/>
+                <circle cx="400" cy="100" r="8"/>
+                <circle cx="400" cy="400" r="8"/>
+                <circle cx="800" cy="400" r="8"/>
+                <circle cx="800" cy="200" r="8"/>
+                <circle cx="1200" cy="200" r="8"/>
+                <circle cx="1200" cy="600" r="8"/>
+                <circle cx="1600" cy="600" r="8"/>
+            </g>
+            <g class="circuit-anim">
+                <circle class="moving-dot" r="6"/>
+            </g>
+        </svg>
+    </div>
+    <div class="animated-bg"></div>
+
+    <!-- Main Navigation (copied from index.html, adjusted links for multi-page) -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="logo">BM</a>
+        <div class="menu-toggle" id="mobile-menu" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode"><i class="fas fa-moon"></i></button>
+    </div>
+  </nav>
+
+    <main class="py-5">
+        <div class="container">
+            <article class="blog-post-full bg-light reveal" data-aos="fade-up" data-aos-duration="1000">
+                <img src="style/images/Adobe_Illustrator_CC_icon.svg.png" alt="Adobe Creative Suite Icons" class="blog-post-header-img">
+                <h1>Creative Design Tools I've Been Loving Lately</h1>
+                <p class="blog-meta">Published: June 13, 2025 | By: BM</p>
+
+                <p>Hey everyone! I wanted to share some of the creative design tools that have been absolutely essential to my workflow lately. As a graphics designer, having the right tools can make all the difference in bringing visions to life.</p>
+
+                <h2>Adobe Illustrator: The Vector King</h2>
+                <p>First up is <span class="font-bold">Adobe Illustrator</span>. If you're into vector graphics, logos, icons, or scalable illustrations, this is your go-to. I've been diving deeper into its features over the past few months, and it's truly a game-changer for my design projects.</p>
+                <ul>
+                    <li><strong class="text-accent">Precision & Scalability:</strong> Unlike raster graphics, vectors can be scaled to any size without losing quality, which is crucial for branding.</li>
+                    <li><strong class="text-accent">Intuitive Tools:</strong> The Pen Tool, Shape Builder, and Pathfinder are incredibly powerful once you get the hang of them, allowing for complex and precise designs.</li>
+                    <li><strong class="text-accent">Typography Control:</strong> Illustrator offers extensive control over type, making it ideal for creating custom lettering and sophisticated text layouts.</li>
+                </ul>
+                <p>From crafting sleek logos to intricate illustrations for web interfaces, Illustrator has streamlined my process and allowed me to produce crisp, professional-grade assets.</p>
+
+                <h2>Adobe Photoshop: The Pixel Master</h2>
+                <p>Next in my arsenal is the classic, but ever-powerful, <span class="font-bold">Adobe Photoshop</span>. It remains the industry standard for a reason. Its capabilities for photo editing, compositing, and creating digital art are simply unparalleled.</p>
+                <ul>
+                    <li><strong class="text-accent">Image Manipulation:</strong> Whether it's retouching photos, adjusting colors, or creating stunning visual effects, Photoshop offers limitless possibilities.</li>
+                    <li><strong class="text-accent">Layer Management:</strong> Working with layers non-destructively is a core strength, enabling complex compositions and easy revisions.</li>
+                    <li><strong class="text-accent">Digital Painting:</strong> With a vast array of brushes and blend modes, it's a fantastic tool for digital artists and illustrators who prefer a raster-based workflow.</li>
+                </ul>
+                <p>I've primarily been leveraging Photoshop to enhance my website visuals, create impactful social media graphics, and even design concept art for my personal projects. The control and flexibility it offers are truly transformative.</p>
+
+                <p>These two tools, in tandem, form the backbone of my creative design toolkit. They complement each other perfectly, allowing me to tackle a wide range of design challenges with confidence and precision.</p>
+
+                <p>What design tools are you currently loving or exploring? I'm always on the lookout for new recommendations and eager to learn about different workflows!</p>
+            </article>
+
+            <!-- Comments Section -->
+            <section class="comments-section reveal" data-aos="fade-up" data-aos-duration="1000">
+                <h2>Comments</h2>
+
+                <div class="comments-list" id="comments-display-area">
+                    <!-- Comments will be loaded here by JavaScript -->
+                    <p class="no-comments">No comments yet. Be the first to leave one!</p>
+                </div>
+
+                <h3>Leave a Comment</h3>
+                <form id="comment-form" class="comment-form">
+                    <div class="form-group">
+                        <label for="comment-name">Your Name:</label>
+                        <input type="text" id="comment-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-text">Your Comment:</label>
+                        <textarea id="comment-text" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </section>
+
+            <div class="text-center mt-8">
+                <a href="index.html#blog" class="btn btn-outline">Back to Blog List</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (copied from index.html) -->
+    <footer id="main-footer" class="py-3">
+        <div class="container footer-content">
+            <p>&copy; 2025 BM. All rights reserved.</p>
+            <ul class="footer-nav">
+                <li><a href="index.html#hero"> Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="index.html#portfolio">Work</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/shedrack-maeda-ab297625b" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/BM4321" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://behance.net/yourusername" target="_blank"><i class="fab fa-behance"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Theme toggle logic (ensure this is consistent with your main site's script.js)
+        document.getElementById('theme-toggle').onclick = function() {
+            document.body.classList.toggle('dark-theme');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        };
+
+        // Animated background blocks (copied from index.html for consistency)
+        document.addEventListener('DOMContentLoaded', function() {
+            const bg = document.querySelector('.animated-bg');
+            for(let i=0; i<18; i++) {
+                const block = document.createElement('div');
+                block.className = 'block';
+                block.style.left = `${Math.random()*100}vw`;
+                block.style.top = `${-Math.random()*100}vh`;
+                block.style.animationDuration = `${8 + Math.random()*8}s`;
+                block.style.opacity = 0.2 + Math.random()*0.3;
+                bg.appendChild(block);
+            }
+
+            // --- Blog Comments Functionality ---
+            const commentForm = document.getElementById('comment-form');
+            const commentsDisplayArea = document.getElementById('comments-display-area');
+            const blogPostId = 'design-tools-blog'; // Unique ID for this specific blog post
+
+            // Function to load and display comments
+            function loadComments() {
+                const comments = JSON.parse(localStorage.getItem(blogPostId + '_comments')) || [];
+                commentsDisplayArea.innerHTML = ''; // Clear existing comments
+
+                if (comments.length === 0) {
+                    commentsDisplayArea.innerHTML = '<p class="no-comments">No comments yet. Be the first to leave one!</p>';
+                    return;
+                }
+
+                comments.forEach(comment => {
+                    const commentItem = document.createElement('div');
+                    commentItem.classList.add('comment-item');
+                    commentItem.innerHTML = `
+                        <div class="comment-header">
+                            <span class="comment-author">${comment.name}</span>
+                            <span class="comment-date">${new Date(comment.timestamp).toLocaleString()}</span>
+                        </div>
+                        <p class="comment-content">${comment.text}</p>
+                    `;
+                    commentsDisplayArea.appendChild(commentItem);
+                });
+            }
+
+            // Event listener for comment form submission
+            if (commentForm) {
+                commentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const nameInput = document.getElementById('comment-name');
+                    const textInput = document.getElementById('comment-text');
+
+                    const name = nameInput.value.trim();
+                    const text = textInput.value.trim();
+
+                    if (name && text) {
+                        const newComment = {
+                            name: name,
+                            text: text,
+                            timestamp: new Date().toISOString() // Store ISO string for consistent parsing
+                        };
+
+                        const comments = JSON.parse(localStorage.getItem(blogPostId + '_comments')) || [];
+                        comments.push(newComment);
+                        localStorage.setItem(blogPostId + '_comments', JSON.stringify(comments));
+
+                        nameInput.value = ''; // Clear form fields
+                        textInput.value = '';
+
+                        loadComments(); // Re-render comments
+                    } else {
+                        // In a real app, you might use a custom modal instead of alert
+                        console.log('Please fill in both name and comment fields.');
+                    }
+                });
+            }
+
+            // Load comments when the page first loads
+            loadComments();
+        });
+            // Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navLinks = document.getElementById('nav-links');
+
+      if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', function() {
+          mobileMenu.classList.toggle('is-active');
+          navLinks.classList.toggle('active');
+          // Accessibility: update aria-expanded
+          mobileMenu.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+      }
+
+      // Optional: Close the menu when a link is clicked (useful for single-page apps)
+      navLinks?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navLinks.classList.contains('active')) {
+            mobileMenu.classList.remove('is-active');
+            navLinks.classList.remove('active');
+            mobileMenu.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    });
+    </script>
+</body>
+</html>

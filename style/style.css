@@ -1,15 +1,87 @@
 /* --- Global Styles & Resets --- */
-body, h1, h2, h3, h4, h5, h6, p, ul, li, figure, figcaption, blockquote, dl, dd {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+:root {
+  /* DARK THEME as default */
+  --bg: #181818;
+  --text: #f1f1f1;
+  --accent: #00bfff;
+  --section-bg: #23272b;
+  --section-bg-dark: #181818;
+  --card-bg: #23272b;
+  --card-bg-dark: #181818;
+  --circuit-line: #00bfff;
+  --circuit-dot: #00bfff;
+  --circuit-anim: #ff00c8;
+}
+
+body.dark-theme {/*light theme*/
+  --bg: #fff;
+  --text: #222;
+  --accent: #007bff;
+  --section-bg: #f8f9fa;
+  --section-bg-dark: #23272b;
+  --card-bg: #fff;
+  --card-bg-dark: #2d3238;
+}
+
+/* Use variables for backgrounds */
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s, color 0.4s;
+}
+
+.bg-light {
+  background-color: var(--section-bg) !important;
+  color: var(--text);
+}
+.bg-dark {
+  background-color: var(--section-bg-dark) !important;
+  color: var(--text);
+}
+#resume-page,
+#resume-page .container {
+  background: transparent !important;
+}
+
+/* LIGHT THEME overrides */
+body.light-theme {
+  --bg: #fff;
+  --text: #222;
+  --accent: #007bff;
+  --section-bg: #f8f9fa;
+  --section-bg-dark: #e9ecef;
+  --card-bg: #fff;
+  --card-bg-dark: #f8f9fa;
+  --circuit-line: #007bff;
+  --circuit-dot: #007bff;
+  --circuit-anim: #ffea00;
 }
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.7;
-    color: #333;
-    background-color: #ffffff; /* White background */
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.4s, color 0.4s;
+}
+body.dark-theme {
+  --bg: #fff;
+  --text: #222;
+  --accent: #007bff;
+  --section-bg: #f8f9fa;
+  --section-bg-dark: #23272b;
+  --card-bg: #fff;
+  --card-bg-dark: #2d3238;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
@@ -59,7 +131,7 @@ ul {
 .py-4 { padding: 4rem 0; }
 .py-5 { padding: 5rem 0; } /* Consistent vertical padding */
 
-.bg-light { background-color: #f8f9fa; } /* Light grey background */
+.bg-light { background-color: #f8f9fa; color: #000;} /* Light grey background */
 .bg-dark { background-color: #343a40; color: #fff; } /* Dark background */
 .bg-dark h2, .bg-dark h3, .bg-dark p { color: #fff; }
 .bg-dark a { color: #6cb2eb; }
@@ -104,7 +176,7 @@ ul {
 
 /* --- 1. Hero Section --- */
 #hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg-placeholder.jpg') no-repeat center center/cover; /* Add a placeholder background image */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/1338166.png') no-repeat center center/cover; /* Add a placeholder background image */
     color: #fff;
     min-height: 80vh;
     display: flex;
@@ -139,7 +211,7 @@ ul {
 
 #hero .cta-button {
     display: inline-block;
-    background-color: #28a745; /* Green */
+    background-color: #1a0b99; /* Green */
     color: #fff;
     padding: 12px 28px;
     text-decoration: none;
@@ -147,12 +219,12 @@ ul {
     font-size: 1.1em;
     margin: 10px 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    border: 2px solid #28a745;
+    border: 2px solid #1a0b99;
 }
 
 #hero .cta-button:hover {
-    background-color: #218838; /* Darker Green */
-    border-color: #218838;
+    background-color: #1a0b99; /* Darker Green */
+    border-color: #1a0b99;
     transform: translateY(-2px);
     text-decoration: none;
 }
@@ -169,16 +241,15 @@ ul {
 
 /* --- Navigation --- */
 #main-nav {
+    align-items: center;
     background: #333;
     color: #fff;
     padding: 10px 0;
     position: sticky; /* Makes nav stick to top on scroll */
-    
     top: 0;
     z-index: 1000; /* Ensures nav stays on top of other content */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    width: 80%;
-    border-radius: 10px;
+    width: 100%;
 }
 
 #main-nav .container {
@@ -188,10 +259,13 @@ ul {
 }
 
 #main-nav ul {
+    flex-direction: row;
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #main-nav ul li {
@@ -211,6 +285,86 @@ ul {
     border-bottom: 2px solid #007bff;
 }
 
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-left {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-logo img {
+  height: 40px;
+}
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: var(--circuit-anim);
+}
+
+/* Responsive Navbar */
+#nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+  z-index: 1100;
+}
+
+@media (max-width: 900px) {
+  .nav-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #nav-toggle {
+    display: block;
+  }
+  #nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #23272b;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    display: none;
+    z-index: 1001;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    padding: 0;
+    margin: 0;
+  }
+  #nav-links.show {
+    display: flex;
+  }
+  #nav-links li {
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid #333;
+  }
+  #nav-links li a, #nav-links li button {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    color: #fff;
+    background: none;
+    border: none;
+    text-align: left;
+  }
+  .nav-logo {
+    margin-left: auto;
+  }
+}
 
 /* --- 2. About Me Section --- */
 #about .about-content {
@@ -284,8 +438,8 @@ ul {
 }
 
 #portfolio .project-card {
-    background: #fff;
-    border: 1px solid #e0e0e0;
+    background: var(--card-bg-dark);
+    border: 1px solid #e0e0e060;
     border-radius: 8px;
     overflow: hidden; /* To contain image corners */
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
@@ -308,19 +462,20 @@ ul {
 #portfolio .project-card h3 {
     padding: 15px 20px 5px 20px;
     font-size: 1.3em;
-    color: #333;
+    color: var(--accent);
 }
 
 #portfolio .project-card p {
     padding: 0 20px 10px 20px;
     font-size: 0.9em;
     flex-grow: 1; /* Allows p to take available space pushing links down */
-    color: #555;
+    color: var(--text);
 }
 
 #portfolio .project-card p strong {
-    color: #333;
+    color: var(--text);
 }
+
 
 #portfolio .project-links {
     padding: 15px 20px;
@@ -555,6 +710,31 @@ ul {
     color: #007bff; /* Highlight color on hover */
 }
 
+/* --- Section backgrounds */
+.bg-light {
+  background-color: var(--section-bg);
+  color: var(--text);
+}
+.bg-dark {
+  background-color: var(--section-bg-dark);
+  color: var(--text);
+}
+#skills .skill-category,
+#portfolio .project-card,
+#testimonials .testimonial,
+#blog .blog-post {
+  background: var(--card-bg);
+  color: var(--text);
+  /* ...existing styles... */
+}
+body.dark-theme #skills .skill-category,
+body.dark-theme #portfolio .project-card,
+body.dark-theme #testimonials .testimonial,
+body.dark-theme #blog .blog-post {
+  background: var(--card-bg-dark);
+  color: var(--text);
+}
+
 /* --- Responsive Adjustments --- */
 @media (min-width: 768px) { /* For tablets and larger */
     #hero h1 {
@@ -606,15 +786,10 @@ ul {
 
 /* --- Resume Page Specific Styles --- */
 #resume-page {
-    background-color: #fff; /* Or a very light grey like #fdfdfd */
-    padding-bottom: 40px; /* Extra padding at the bottom */
+    background: transparent !important;
 }
-
 #resume-page .container {
-    max-width: 900px; /* Optimal width for readability of a resume */
-    background-color: #ffffff;
-    /* box-shadow: 0 0 15px rgba(0,0,0,0.1); Optional: if you want a card effect for the resume */
-    /* padding: 30px 40px; Optional: if adding shadow/border */
+    background: transparent !important;
 }
 
 .resume-header {
@@ -752,4 +927,475 @@ ul {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+.animated-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.animated-bg .block {
+  position: absolute;
+  width: 60px; /* larger blocks */
+  height: 60px;
+  background: rgba(0, 0, 0, 0.18); /* more visible in light */
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  border: 2px solid rgba(0,0,0,0.12);
+  animation: moveBlock 12s linear infinite;
+}
+body.dark-theme .animated-bg .block {
+  background: rgba(0, 0, 0, 0.18);
+  border: 2px solid rgba(0,0,0,0.18);
+}
+body:not(.light-theme) .animated-bg .block {
+  background: rgba(255, 255, 255, 0.22); /* more visible in dark */
+  border: 2px solid rgba(255,255,255,0.18);
+  box-shadow: 0 4px 24px rgba(255,255,255,0.08);
+}
+@keyframes moveBlock {
+  0% { transform: translateY(0) scale(1);}
+  100% { transform: translateY(100vh) scale(1.2);}
+}
+
+.circuit-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.circuit-bg svg {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+.circuit-lines line {
+  stroke: var(--circuit-line, #00bfff);
+  stroke-width: 4;
+  opacity: 0.3;
+  stroke-dasharray: 12 8;
+  animation: dashmove 3s linear infinite;
+}
+.circuit-dots circle {
+  fill: var(--circuit-dot, #00bfff);
+  opacity: 0.5;
+}
+.circuit-anim .moving-dot {
+  fill: var(--circuit-anim, #ffea00);
+  animation: moveDot 5s linear infinite;
+}
+@keyframes dashmove {
+  to { stroke-dashoffset: 100; }
+}
+@keyframes moveDot {
+  0%   { transform: translate(100px,100px);}
+  15%  { transform: translate(400px,100px);}
+  30%  { transform: translate(400px,400px);}
+  50%  { transform: translate(800px,400px);}
+  65%  { transform: translate(800px,200px);}
+  80%  { transform: translate(1200px,200px);}
+  90%  { transform: translate(1200px,600px);}
+  100% { transform: translate(1600px,600px);}
+}
+
+/* Light/Dark theme circuit colors */
+body {
+  --circuit-line: #00bfff;
+  --circuit-dot: #00bfff;
+  --circuit-anim: #ff00c8;
+}
+body.dark-theme {
+  --circuit-line: #00ffea;
+  --circuit-dot: #00ffea;
+  --circuit-anim:  #ffea00;
+}
+
+body {
+  color: var(--text);
+}
+body:not(.light-theme) {
+  --text: #f8f9fa;
+  --accent: #00e1ff;
+}
+body:not(.light-theme) h1,
+body:not(.light-theme) h2,
+body:not(.light-theme) h3,
+body:not(.light-theme) h4,
+body:not(.light-theme) h5,
+body:not(.light-theme) h6 {
+  color: #fff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+body:not(.light-theme) p,
+body:not(.light-theme) li,
+body:not(.light-theme) .resume-header .contact-info,
+body:not(.light-theme) .resume-entry .date-location {
+  color: #e0e0e0 !important;
+}
+body:not(.light-theme) a {
+  color: #00e1ff;
+}
+body:not(.light-theme) a:hover {
+  color: #fff;
+}
+
+        /* Specific styles for the blog post content and comments */
+        .blog-post-full {
+            max-width: 800px; /* Adjust as needed */
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            line-height: 1.8;
+            background-color: var(--card-bg); /* Use theme variable */
+            color: var(--text); /* Use theme variable */
+        }
+
+        .blog-post-full h1 {
+            font-size: 2.8em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text); /* Use text variable */
+        }
+
+        .blog-post-full h2 {
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--accent); /* Use accent variable */
+            padding-bottom: 5px;
+            color: var(--text); /* Use text variable */
+        }
+
+        .blog-post-full p, .blog-post-full ul {
+            margin-bottom: 1em;
+            color: var(--text); /* Use text variable */
+        }
+
+        .blog-post-full ul {
+            list-style: disc;
+            margin-left: 25px;
+        }
+
+        .blog-meta {
+            text-align: center;
+            font-style: italic;
+            color: #777; /* Keep a neutral grey for meta info */
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+
+        .blog-post-header-img {
+            width: 100%;
+            height: 300px; /* Adjust as needed */
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        /* Comments Section Styling */
+        .comments-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            background-color: var(--card-bg); /* Use theme variable */
+            color: var(--text);
+        }
+
+        .comments-section h2 {
+            text-align: left; /* Override global h2 center */
+            text-transform: none; /* Override global h2 uppercase */
+            letter-spacing: 0; /* Override global h2 letter-spacing */
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: var(--text);
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 10px;
+        }
+
+        .comment-form .form-group {
+            margin-bottom: 15px;
+        }
+
+        .comment-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--text);
+        }
+
+        .comment-form input[type="text"],
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: var(--bg); /* Use a slightly darker background for inputs */
+            color: var(--text);
+        }
+        .comment-form input[type="text"]:focus,
+        .comment-form textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Focus ring */
+        }
+
+        .comment-form button {
+            background-color: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .comment-form button:hover {
+            background-color: #0056b3; /* Darker accent on hover */
+        }
+
+        .comments-list {
+            margin-top: 30px;
+        }
+
+        .comment-item {
+            background-color: var(--section-bg); /* Use section-bg for comment items */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent);
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .comment-author {
+            font-weight: bold;
+            color: var(--text);
+        }
+
+        .comment-date {
+            font-style: italic;
+        }
+
+        .comment-content {
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .no-comments {
+            text-align: center;
+            color: #888;
+            padding: 20px;
+            font-style: italic;
+        }
+                /* Add specific styles for the resume page if needed, overriding or extending style.css */
+        /* For example, to make sure text is readable against circuit background */
+        #resume-page .container {
+            background: var(--bg); /* Use theme background variable */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        body.dark-theme #resume-page .container {
+            background: var(--section-bg-dark); /* Darker background for content in dark mode */
+            color: var(--text);
+        }
+        .resume-header h1, .resume-header p {
+            color: var(--text); /* Ensure headers are readable in both themes */
+        }
+        .resume-header .contact-info span {
+            color: var(--text);
+        }
+        .resume-header .contact-info a {
+             color: var(--accent); /* Use accent color for links */
+        }
+        .resume-section h2 {
+            color: var(--accent); /* Accent color for section titles */
+            border-bottom: 2px solid var(--accent);
+        }
+        .resume-entry h3, .resume-entry ul li, .skills-section h4, .skills-section ul li {
+            color: var(--text);
+        }
+        .resume-entry .date-location {
+            color: #666; /* Neutral color for dates/locations */
+        }
+        body.dark-theme .resume-entry .date-location {
+            color: #ccc; /* Lighter neutral color for dates/locations in dark mode */
+        }
+        .profile-pic-resume {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+
+        /* Specific style for the referee section */
+        .referees-section {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            gap: 30px;
+            justify-content: center; /* Center referees */
+        }
+
+        .referee-entry {
+            flex: 1; /* Allow items to grow/shrink */
+            min-width: 280px; /* Minimum width for each referee */
+            background: var(--card-bg); /* Use card background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent); /* Accent border */
+            color: var(--text);
+        }
+
+        .referee-entry h3 {
+            font-size: 1.2em;
+            color: var(--text);
+            margin-bottom: 5px;
+        }
+        .referee-entry p {
+            font-size: 0.95em;
+            margin-bottom: 5px;
+            color: var(--text);
+        }
+        .referee-entry a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .referee-entry a:hover {
+            text-decoration: underline;
+        }
+        /* Navigation Bar Styling */
+.navbar {
+    background: var(--section-bg);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Navigation links styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li {
+    margin-left: 30px;
+}
+.nav-links a {
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+    color: var(--text);
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--text);
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+.theme-toggle:hover {
+    color: var(--accent);
+}
+
+/* Mobile hamburger icon */
+.menu-toggle {
+  display: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute; /* no longer sticky */
+  }
+  /* Hide the hamburger menu */
+  .menu-toggle {
+    display: none;
+  }
+  /* Ensure nav-links display horizontally */
+  .nav-links {
+    display: flex !important;
+    position: static;
+    width: auto;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .nav-links li {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    position: relative; /* no longer sticky */
+  }
+  /* Hide hamburger if present */
+  .menu-toggle {
+    display: none;
+  }
+  /* Change nav-links layout to horizontal if needed */
+  .nav-links {
+    display: flex !important;
+    position: static;
+    width: auto;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .nav-links li {
+    margin: 0 10px;
+  }
 }

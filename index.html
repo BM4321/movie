@@ -6,34 +6,68 @@
     <title>BM - Software Engineer & Graphics Designer</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="style/images/logo.svg" type="image/x-icon">
 </head>
 <body>
+  <div class="circuit-bg">
+    <svg width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+      <g class="circuit-lines">
+        <line x1="100" y1="100" x2="400" y2="100"/>
+        <line x1="400" y1="100" x2="400" y2="400"/>
+        <line x1="400" y1="400" x2="800" y2="400"/>
+        <line x1="800" y1="400" x2="800" y2="200"/>
+        <line x1="800" y1="200" x2="1200" y2="200"/>
+        <line x1="1200" y1="200" x2="1200" y2="600"/>
+        <line x1="1200" y1="600" x2="1600" y2="600"/>
+      </g>
+      <g class="circuit-dots">
+        <circle cx="100" cy="100" r="8"/>
+        <circle cx="400" cy="100" r="8"/>
+        <circle cx="400" cy="400" r="8"/>
+        <circle cx="800" cy="400" r="8"/>
+        <circle cx="800" cy="200" r="8"/>
+        <circle cx="1200" cy="200" r="8"/>
+        <circle cx="1200" cy="600" r="8"/>
+        <circle cx="1600" cy="600" r="8"/>
+      </g>
+      <g class="circuit-anim">
+        <circle class="moving-dot" r="6"/>
+      </g>
+    </svg>
+  </div>
+  <div class="animated-bg"></div>
+
+  <nav class="navbar">
+  <div class="navbar-container">
+    <a href="#hero" class="logo">BM</a>
+    <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
+</nav>
 
     <header id="hero" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <h1>BM — Software Engineer & Graphics Designer</h1>
-            <p class="tagline">Building beautiful and functional digital experiences.</p>
+            <p class="tagline">Building new worlds one pixel at a time</p>
             <a href="#portfolio" class="cta-button">View My Work</a>
             <a href="#contact" class="cta-button alt">Let’s Connect</a>
         </div>
     </header>
 
-    <nav id="main-nav">
-        <div class="container">
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li> 
-				<li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-				<li><a href="resume.html">Resume</a></li>
-
-            </ul>
-        </div>
-    </nav>
 
     <section id="about" class="py-5">
         <div class="container">
@@ -45,7 +79,7 @@
 <p>By day (and often night), I’m a Software Engineer and Graphics Designer who thrives at the intersection of logic and aesthetics. My journey into the digital world started with curiosity — how do games work? How do websites come to life? That curiosity quickly evolved into a mission: to build tech that not only works seamlessly but looks and feels amazing.</p>
 
 <p>Whether I’m developing robust backend systems or designing smooth, engaging user experiences, I approach each project with the same mindset: tell a story, solve a problem, and leave a lasting impression. I see every line of code and every design element as part of a bigger narrative — one that’s meant to be both functional and unforgettable.</p>
-					<a href="docs/your-cv.pdf" download class="btn">Download CV (PDF)</a>
+					<a href="docs/shedrack.pdf" download class="btn">Download CV (PDF)</a>
 					<a href="resume.html" class="btn btn-outline" style="margin-left: 10px;">View Full Resume Page</a>
                 </div>
                 </div>
@@ -89,34 +123,32 @@
             <h2>Portfolio / Projects</h2>
             <div class="projects-grid">
                 <div class="project-card software">
-                    <img src="images/IMG_2658 (1).PNG" alt="Project 1 Thumbnail">
+                    <img src="style/images/unnamed.jpg" alt="Project 1 Thumbnail">
                     <h3>Readapp (android App)</h3>
                     <p>It is a simple easy to use reading application which allows user to have acces to a library on theier mobile phones. It contains a library of books categorized and arranged according to users liking.</p>
                     <p><strong>Tech Used:</strong> Kotlin, Java</p>
                     <div class="project-links">
-                        <a href="#" target="_blank" class="btn-outline">Live Demo</a>
-                        <a href="#" target="_blank" class="btn-outline">GitHub</a>
+                        <a href="github\BM4321\Readapp" target="_blank" class="btn-outline">GitHub</a>
                     </div>
                 </div>
 
                 <div class="project-card design">
-                     <img src="images/intro-bg.png" alt="Project 2 Thumbnail">
+                     <img src="style/images/my design.png" alt="Project 2 Thumbnail">
                     <h3>Meerkat adventures and safaris (Design)</h3>
                     <p>a graphical design of a poster for tour company</p>
                     <p><strong>Tools Used:</strong> Adobe photoshop, Adobe Illustrator</p>
                     <div class="project-links">
-                        <a href="#" target="_blank" class="btn-outline">View on Behance/Dribbble</a>
+                        <a href="https://www.pinterest.com/pin/929078598135273178/" target="_blank" class="btn-outline">View on Pinterest</a>
                     </div>
                 </div>
 
                 <div class="project-card software">
-                    <img src="images/project3-placeholder.png" alt="Project 3 Thumbnail">
+                    <img src="style/images/ipad-dashboard.jpg" alt="Project 3 Thumbnail">
                     <h3>online votting system</h3>
                     <p>A simple easy to use voting platform allowing votting of evnets nad candidates and alos providing realtime results</p>
                     <p><strong>Tech Used:</strong> Python, Django, HTML, CSS, JS</p>
                     <div class="project-links">
-                        <a href="#" target="_blank" class="btn-outline">Live Demo</a>
-                        <a href="#" target="_blank" class="btn-outline">GitHub</a>
+                        <a href="https://github.com/BM4321/Voting-Site.git" target="_blank" class="btn-outline">GitHub</a>
                     </div>
                 </div>
                 </div>
@@ -132,7 +164,7 @@
                 </div>
                 <div class="testimonial">
                     <p>"BM has a unique talent for both development and design, bringing a complete package to the table."</p>
-                    <h4>- John Smith, Project Manager</h4>
+                    <h4>- Ji young Rhee, CEO E3empower Africa</h4>
                 </div>
                 </div>
         </div>
@@ -143,16 +175,16 @@
             <h2>Blog / Insights</h2>
             <div class="blog-grid">
                 <article class="blog-post">
-                    <img src="images/adobe illustrator.png" alt="Blog Post 1 Thumbnail">
+                    <img src="style/images/Adobe_Illustrator_CC_icon.svg.png" alt="Blog Post 1 Thumbnail">
                     <h3>My Favorite Design Tools in 2025</h3>
                     <p>A quick rundown of the tools I can't live without for my design workflow...</p>
-                    <a href="#" class="btn-outline">Read More</a>
+                    <a href="design-tools-blog.html" class="btn btn-outline self-end">Read More <i class="fas fa-arrow-right ml-2"></i></a>
                 </article>
                 <article class="blog-post">
-                    <img src="images/blog2-placeholder.png" alt="Blog Post 2 Thumbnail">
+                    <img src="style/images/unnamed.jpg" alt="Blog Post 2 Thumbnail">
                     <h3>Understanding Asynchronous JavaScript</h3>
                     <p>Breaking down promises and async/await for cleaner code...</p>
-                    <a href="#" class="btn-outline">Read More</a>
+                    <a href="dev-tools-blog.html" class="btn btn-outline self-end">Read More <i class="fas fa-arrow-right ml-2"></i></a>
                 </article>
                 </div>
         </div>
@@ -182,51 +214,93 @@
             <div class="contact-links">
                 <p>Or connect with me via:</p>
                 <a href="mailto:shedrackmaeda@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://linkedin.com/in/shedrack-maeda-ab297625b" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://behance.net/yourusername" target="_blank"><i class="fab fa-behance"></i> Behance</a>
+                <a href="https://behance.net/yourusername" target="_blank"><i class="fab fa-pinterest"></i> Behance</a>
                 </div>
         </div>
     </section>
 
-<footer id="main-footer" class="py-3">
-        <div class="container footer-content">
-            <p>&copy; 2025 BM. All rights reserved.</p>
-            <ul class="footer-nav">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="resume.html">Resume</a></li> <li><a href="#portfolio">Work</a></li>
-                </ul>
-            <div class="social-icons">
-                <a href="www.linkedin.com/in/shedrack-maeda-ab297625b" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://behance.net/yourusername" target="_blank"><i class="fab fa-behance"></i></a>
-            </div>
+  <footer id="main-footer" class="py-3">
+    <div class="container footer-content">
+        <p>&copy; 2025 BM. All rights reserved.</p>
+        <ul class="footer-nav">
+            <li><a href="#hero"> Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="#portfolio">Work</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/shedrack-maeda-ab297625b" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/BM4321" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://behance.net/yourusername" target="_blank"><i class="fab fa-behance"></i></a>
         </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init(tuz-GUcV2dQbPQG1T); // Get from EmailJS dashboard
-  })();
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("tuz-GUcV2dQbPQG1T");
+    })();
 
-  document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-    
-    emailjs.sendForm(service_dkji2ra, template_6mq6qgv, this)
-      .then(function() {
-        alert("Message sent successfully!");
-      }, function(error) {
-        alert("Failed to send message: " + error.text);
-      });
+    document.getElementById("contact-form")?.addEventListener("submit", function(e) {
+      e.preventDefault();
+      emailjs.sendForm("service_dkji2ra", "template_6mq6qgv", this)
+        .then(function() {
+          alert("Message sent successfully!");
+        }, function(error) {
+          alert("Failed to send message: " + error.text);
+        });
+    });
+
+    // Theme toggle
+    document.getElementById('theme-toggle').onclick = function() {
+      document.body.classList.toggle('dark-theme');
+      const icon = this.querySelector('i');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    };
+
+    // Animated background blocks
+    const bg = document.querySelector('.animated-bg');
+    for(let i=0; i<18; i++) {
+      const block = document.createElement('div');
+      block.className = 'block';
+      block.style.left = `${Math.random()*100}vw`;
+      block.style.top = `${-Math.random()*100}vh`;
+      block.style.animationDuration = `${8 + Math.random()*8}s`;
+      block.style.opacity = 0.2 + Math.random()*0.3;
+      bg.appendChild(block);
+    }
+
+    // Hamburger menu toggle
+document.addEventListener('DOMContentLoaded', function () {
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navLinks = document.getElementById('nav-links');
+  
+  mobileMenu.addEventListener('click', function () {
+    mobileMenu.classList.toggle('is-active');
+    navLinks.classList.toggle('active');
+    mobileMenu.setAttribute('aria-expanded', navLinks.classList.contains('active') ? 'true' : 'false');
   });
-</script>
-
+  
+  // Optionally collapse the side nav when a link is clicked:
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function () {
+      if(navLinks.classList.contains('active')) {
+        mobileMenu.classList.remove('is-active');
+        navLinks.classList.remove('active');
+        mobileMenu.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+});
+  </script>
 </body>
 </html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Development Tools - BM's Blog</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="style/images/logo.svg" type="image/x-icon">
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- Background animations (copied from index.html) -->
+    <div class="circuit-bg">
+        <svg width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+            <g class="circuit-lines">
+                <line x1="100" y1="100" x2="400" y2="100"/>
+                <line x1="400" y1="100" x2="400" y2="400"/>
+                <line x1="400" y1="400" x2="800" y2="400"/>
+                <line x1="800" y1="400" x2="800" y2="200"/>
+                <line x1="800" y1="200" x2="1200" y2="200"/>
+                <line x1="1200" y1="200" x2="1200" y2="600"/>
+                <line x1="1200" y1="600" x2="1600" y2="600"/>
+            </g>
+            <g class="circuit-dots">
+                <circle cx="100" cy="100" r="8"/>
+                <circle cx="400" cy="100" r="8"/>
+                <circle cx="400" cy="400" r="8"/>
+                <circle cx="800" cy="400" r="8"/>
+                <circle cx="800" cy="200" r="8"/>
+                <circle cx="1200" cy="200" r="8"/>
+                <circle cx="1200" cy="600" r="8"/>
+                <circle cx="1600" cy="600" r="8"/>
+            </g>
+            <g class="circuit-anim">
+                <circle class="moving-dot" r="6"/>
+            </g>
+        </svg>
+    </div>
+    <div class="animated-bg"></div>
+
+    <!-- Main Navigation (copied from index.html, adjusted links for multi-page) -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="logo">BM</a>
+        <div class="menu-toggle" id="mobile-menu" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode"><i class="fas fa-moon"></i></button>
+    </div>
+  </nav>
+
+    <main class="py-5">
+        <div class="container">
+            <article class="blog-post-full bg-light reveal" data-aos="fade-up" data-aos-duration="1000">
+                <img src="style/images/unnamed.jpg" alt="Development Tools Icon" class="blog-post-header-img">
+                <h1>My Favorite Development Tools</h1>
+                <p class="blog-meta">Published: June 13, 2025 | By: BM</p>
+
+                <p>Hey everyone! As a software engineer, the right tools are as crucial as the code itself. I wanted to share some of my favorite development tools that have truly streamlined my workflow and boosted my productivity lately.</p>
+
+                <h2>Visual Studio Code: The Versatile Editor</h2>
+                <p>First and foremost, <span class="font-bold">Visual Studio Code (VS Code)</span> is my daily driver. It's an incredibly lightweight yet powerful code editor that supports a vast array of programming languages and frameworks through its extensive marketplace of extensions.</p>
+                <ul>
+                    <li><strong class="text-accent">Extensibility:</strong> The sheer number of extensions for linting, debugging, Git integration, and language support is unmatched.</li>
+                    <li><strong class="text-accent">Integrated Terminal:</strong> Having a terminal directly within the editor saves so much time and context switching.</li>
+                    <li><strong class="text-accent">IntelliSense:</strong> Smart code completion based on language semantics provides a seamless coding experience.</li>
+                </ul>
+                <p>I use VS Code for everything from Python scripting to HTML/CSS/JavaScript front-end work, and it consistently delivers a smooth and efficient coding environment.</p>
+
+                <h2>Python: The All-Rounder Language</h2>
+                <p>Next up is <span class="font-bold">Python</span>. This language is a classic for a reason – its versatility and readability are simply fantastic. Whether I'm building web applications, automating tasks, or delving into data analysis, Python handles it with grace.</p>
+                <ul>
+                    <li><strong class="text-accent">Readability:</strong> Its clean syntax makes code easy to write and understand, which is great for collaboration and maintenance.</li>
+                    <li><strong class="text-accent">Vast Libraries:</strong> From web frameworks like Django and Flask to data science libraries like Pandas and NumPy, Python's ecosystem is incredibly rich.</li>
+                    <li><strong class="text-accent">Community Support:</strong> A huge and active community means plenty of resources, tutorials, and support.</li>
+                </ul>
+                <p>My voting website project, built with Flask, is a testament to Python's capabilities in web development. Its simplicity allows me to focus more on the logic and less on verbose syntax.</p>
+
+                <h2>Android Studio & Kotlin: Mobile Development Powerhouse</h2>
+                <p>For mobile app development, <span class="font-bold">Android Studio</span> paired with <span class="font-bold">Kotlin</span> is my preferred combination. Android Studio provides a robust IDE tailored for Android, while Kotlin offers a modern, concise, and safer alternative to Java.</p>
+                <ul>
+                    <li><strong class="text-accent">Integrated Development Environment:</strong> Android Studio provides everything needed for Android development, from UI design tools to emulators and debugging.</li>
+                    <li><strong class="text-accent">Kotlin's Conciseness:</strong> Kotlin significantly reduces boilerplate code compared to Java, making development faster and more enjoyable.</li>
+                    <li><strong class="text-accent">Null Safety:</strong> Kotlin's built-in null safety features help prevent common app crashes.</li>
+                </ul>
+                <p>Developing the Readapp with Kotlin in Android Studio was a smooth experience, allowing me to focus on features and user experience rather than battling with language intricacies.</p>
+
+                <p>These tools form the core of my development toolkit, enabling me to build diverse projects efficiently and effectively. What are your go-to development tools? Share your insights!</p>
+            </article>
+
+            <!-- Comments Section -->
+            <section class="comments-section reveal" data-aos="fade-up" data-aos-duration="1000">
+                <h2>Comments</h2>
+
+                <div class="comments-list" id="comments-display-area">
+                    <!-- Comments will be loaded here by JavaScript -->
+                    <p class="no-comments">No comments yet. Be the first to leave one!</p>
+                </div>
+
+                <h3>Leave a Comment</h3>
+                <form id="comment-form" class="comment-form">
+                    <div class="form-group">
+                        <label for="comment-name">Your Name:</label>
+                        <input type="text" id="comment-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-text">Your Comment:</label>
+                        <textarea id="comment-text" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </section>
+
+            <div class="text-center mt-8">
+                <a href="index.html#blog" class="btn btn-outline">Back to Blog List</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (copied from index.html) -->
+    <footer id="main-footer" class="py-3">
+        <div class="container footer-content">
+            <p>&copy; 2025 BM. All rights reserved.</p>
+            <ul class="footer-nav">
+                <li><a href="index.html#hero"> Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="index.html#portfolio">Work</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/shedrack-maeda-ab297625b" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/BM4321" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://behance.net/yourusername" target="_blank"><i class="fab fa-behance"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Theme toggle logic (ensure this is consistent with your main site's script.js)
+        document.getElementById('theme-toggle').onclick = function() {
+            document.body.classList.toggle('dark-theme');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        };
+
+        // Animated background blocks (copied from index.html for consistency)
+        document.addEventListener('DOMContentLoaded', function() {
+            const bg = document.querySelector('.animated-bg');
+            for(let i=0; i<18; i++) {
+                const block = document.createElement('div');
+                block.className = 'block';
+                block.style.left = `${Math.random()*100}vw`;
+                block.style.top = `${-Math.random()*100}vh`;
+                block.style.animationDuration = `${8 + Math.random()*8}s`;
+                block.style.opacity = 0.2 + Math.random()*0.3;
+                bg.appendChild(block);
+            }
+
+            // --- Blog Comments Functionality ---
+            const commentForm = document.getElementById('comment-form');
+            const commentsDisplayArea = document.getElementById('comments-display-area');
+            const blogPostId = 'dev-tools-blog'; // Unique ID for this specific blog post
+
+            // Function to load and display comments
+            function loadComments() {
+                const comments = JSON.parse(localStorage.getItem(blogPostId + '_comments')) || [];
+                commentsDisplayArea.innerHTML = ''; // Clear existing comments
+
+                if (comments.length === 0) {
+                    commentsDisplayArea.innerHTML = '<p class="no-comments">No comments yet. Be the first to leave one!</p>';
+                    return;
+                }
+
+                comments.forEach(comment => {
+                    const commentItem = document.createElement('div');
+                    commentItem.classList.add('comment-item');
+                    commentItem.innerHTML = `
+                        <div class="comment-header">
+                            <span class="comment-author">${comment.name}</span>
+                            <span class="comment-date">${new Date(comment.timestamp).toLocaleString()}</span>
+                        </div>
+                        <p class="comment-content">${comment.text}</p>
+                    `;
+                    commentsDisplayArea.appendChild(commentItem);
+                });
+            }
+
+            // Event listener for comment form submission
+            if (commentForm) {
+                commentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const nameInput = document.getElementById('comment-name');
+                    const textInput = document.getElementById('comment-text');
+
+                    const name = nameInput.value.trim();
+                    const text = textInput.value.trim();
+
+                    if (name && text) {
+                        const newComment = {
+                            name: name,
+                            text: text,
+                            timestamp: new Date().toISOString() // Store ISO string for consistent parsing
+                        };
+
+                        const comments = JSON.parse(localStorage.getItem(blogPostId + '_comments')) || [];
+                        comments.push(newComment);
+                        localStorage.setItem(blogPostId + '_comments', JSON.stringify(comments));
+
+                        nameInput.value = ''; // Clear form fields
+                        textInput.value = '';
+
+                        loadComments(); // Re-render comments
+                    } else {
+                        // In a real app, you might use a custom modal instead of alert
+                        console.log('Please fill in both name and comment fields.');
+                    }
+                });
+            }
+
+            // Load comments when the page first loads
+            loadComments();
+        });
+            // Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navLinks = document.getElementById('nav-links');
+
+      if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', function() {
+          mobileMenu.classList.toggle('is-active');
+          navLinks.classList.toggle('active');
+          // Accessibility: update aria-expanded
+          mobileMenu.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+      }
+
+      // Optional: Close the menu when a link is clicked (useful for single-page apps)
+      navLinks?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navLinks.classList.contains('active')) {
+            mobileMenu.classList.remove('is-active');
+            navLinks.classList.remove('active');
+            mobileMenu.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    });
+    </script>
+</body>
+</html>
